@@ -7,7 +7,7 @@ df_ipatinga = pd.read_csv('src/csv/ipatinga.csv')
 
 df_ipatinga_filter = df_ipatinga[df_ipatinga['totalBens'] <= 1.5e7]
 
-st.markdown("<h1 style='text-align: center; color: wite;'>TSE Analitics - Candidatos 2024</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; color: wite;'>TSE Analytics - Candidatos 2024</h1>", unsafe_allow_html=True)
 st.markdown("<h4 style='text-align: center; color: wite;'>Análise de dados do TSE para os candidatos de Ipatinga-MG</h4>", unsafe_allow_html=True)
 
 st.text('')
