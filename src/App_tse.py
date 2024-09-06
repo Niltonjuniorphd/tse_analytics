@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 #
-df_ipatinga = pd.read_csv('csv/ipatinga.csv')
+df_ipatinga = pd.read_csv('src/csv/ipatinga.csv')
 
 df_ipatinga_filter = df_ipatinga[df_ipatinga['totalBens'] <= 1.5e7]
 
