@@ -2,6 +2,14 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 
+
+
+#st.dataframe(
+#    {
+#        "value": [10000, 13123.41, 21312341.123, 4123],
+#    },
+#    column_config={"value": st.column_config.NumberColumn(format="%f")},
+#)
 #
 df_ipatinga = pd.read_csv('src/csv/ipatinga.csv')
 
@@ -113,9 +121,13 @@ ax1.pie(sizes, labels=labels, autopct='%1.1f%%', #explode=explode,
 ax1.axis('equal')# Equal aspect ratio ensures that pie is drawn as a circle.
 #ax1.set_title('Grau de Instrução', fontsize=16, pad=20)
 st.pyplot(fig1)
-df_bem_cor
+st.dataframe(df_bem_cor, column_config={
+    "bemMedio": st.column_config.NumberColumn(format="%.1f"),
+    "sum": st.column_config.NumberColumn(format="%.1f")
+    })
 st.text('Bem declarado de cor Amarela:')
-df_ipatinga_filter[df_ipatinga_filter['DS_COR_RACA'] == 'AMARELA']
+st.dataframe(df_ipatinga_filter[df_ipatinga_filter['DS_COR_RACA'] == 'AMARELA'],
+             column_config={"bemMedio": st.column_config.NumberColumn(format="%f")})
 st.text('Maior bem declarado negro:')
 df_ipatinga_filter[(df_ipatinga_filter['DS_COR_RACA'] == 'PRETA') & 
                    (df_ipatinga_filter['totalBens'] == df_ipatinga_filter[df_ipatinga_filter['DS_COR_RACA'] == 'PRETA']['totalBens'].max())]
