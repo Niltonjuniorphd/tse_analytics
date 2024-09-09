@@ -15,8 +15,8 @@ df_ipatinga = pd.read_csv('src/csv/ipatinga.csv')
 
 df_ipatinga_filter = df_ipatinga[df_ipatinga['totalBens'] <= 1.5e7]
 
-st.markdown("<h1 style='text-align: center; color: wite;'>TSE Analytics - Candidatos 2024</h1>", unsafe_allow_html=True)
-st.markdown("<h4 style='text-align: center; color: wite;'>Análise de dados do TSE para os candidatos de Ipatinga-MG</h4>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; color: white;'>TSE Analytics - Candidatos 2024</h1>", unsafe_allow_html=True)
+st.markdown("<h4 style='text-align: center; color: white;'>Análise de dados do <a href='https://dados.gov.br/dados/conjuntos-dados/candidatos-2024'>TSE</a> para os candidatos de Ipatinga-MG</h4>", unsafe_allow_html=True)
 
 st.text('')
 
@@ -26,7 +26,7 @@ labels = df_ipatinga['SG_PARTIDO'].value_counts().index
 sizes = df_ipatinga['SG_PARTIDO'].value_counts()
 fig1, ax1 = plt.subplots()
 ax1.pie(sizes, labels=labels, autopct='%1.1f%%', #explode=explode, 
-        shadow=False, startangle=90, textprops={'fontsize': 8})
+        shadow=False, startangle=90, textprops={'fontsize': 15})
 ax1.axis('equal')# Equal aspect ratio ensures that pie is drawn as a circle.
 #ax1.set_title('Grau de Instrução', fontsize=16, pad=20)
 st.pyplot(fig1)
@@ -42,7 +42,7 @@ new_label = ('MÉDIO', 'SUPERIOR',
 sizes = df_ipatinga['DS_GRAU_INSTRUCAO'].value_counts()
 fig1, ax1 = plt.subplots()
 ax1.pie(sizes, labels=new_label, autopct='%1.1f%%', #explode=explode, 
-        shadow=False, startangle=90, textprops={'fontsize': 8})
+        shadow=False, startangle=90, textprops={'fontsize': 15})
 ax1.axis('equal')# Equal aspect ratio ensures that pie is drawn as a circle.
 #ax1.set_title('Grau de Instrução', fontsize=16, pad=20)
 st.pyplot(fig1)
@@ -59,7 +59,7 @@ new_label = ('MÉDIO', 'SUPERIOR',
 sizes = ens_fem['DS_GRAU_INSTRUCAO'].value_counts()
 fig1, ax1 = plt.subplots()
 ax1.pie(sizes, labels=new_label, autopct='%1.1f%%', #explode=explode, 
-        shadow=False, startangle=90, textprops={'fontsize': 8})
+        shadow=False, startangle=90, textprops={'fontsize': 15})
 ax1.axis('equal')# Equal aspect ratio ensures that pie is drawn as a circle.
 #ax1.set_title('Grau de Instrução', fontsize=16, pad=20)
 st.pyplot(fig1)
@@ -75,7 +75,7 @@ new_label = ('MÉDIO', 'SUPERIOR',
 sizes = ens_masc['DS_GRAU_INSTRUCAO'].value_counts()
 fig1, ax1 = plt.subplots()
 ax1.pie(sizes, labels=new_label, autopct='%1.1f%%', #explode=explode, 
-        shadow=False, startangle=90, textprops={'fontsize': 8})
+        shadow=False, startangle=90, textprops={'fontsize': 15})
 ax1.axis('equal')# Equal aspect ratio ensures that pie is drawn as a circle.
 #ax1.set_title('Grau de Instrução', fontsize=16, pad=20)
 st.pyplot(fig1)
@@ -86,7 +86,7 @@ labels = df_ipatinga['DS_GENERO'].value_counts().index
 sizes = df_ipatinga['DS_GENERO'].value_counts()
 fig1, ax1 = plt.subplots()
 ax1.pie(sizes, labels=labels, autopct='%1.1f%%', #explode=explode, 
-        shadow=False, startangle=90, textprops={'fontsize': 8})
+        shadow=False, startangle=90, textprops={'fontsize': 15})
 ax1.axis('equal')# Equal aspect ratio ensures that pie is drawn as a circle.
 #ax1.set_title('Grau de Instrução', fontsize=16, pad=20)
 st.pyplot(fig1)
@@ -98,7 +98,7 @@ labels = df_ipatinga['DS_COR_RACA'].value_counts().index
 sizes = df_ipatinga['DS_COR_RACA'].value_counts()
 fig1, ax1 = plt.subplots()
 ax1.pie(sizes, labels=labels, autopct='%1.1f%%', #explode=explode, 
-        shadow=False, startangle=90, textprops={'fontsize': 8})
+        shadow=False, startangle=90, textprops={'fontsize': 15})
 ax1.axis('equal')# Equal aspect ratio ensures that pie is drawn as a circle.
 #ax1.set_title('Grau de Instrução', fontsize=16, pad=20)
 st.pyplot(fig1)
@@ -117,7 +117,7 @@ labels = df_bem_cor['DS_COR_RACA']
 sizes = df_bem_cor['bemMedio']
 fig1, ax1 = plt.subplots()
 ax1.pie(sizes, labels=labels, autopct='%1.1f%%', #explode=explode, 
-        shadow=False, startangle=90, textprops={'fontsize': 8})
+        shadow=False, startangle=90, textprops={'fontsize': 15})
 ax1.axis('equal')# Equal aspect ratio ensures that pie is drawn as a circle.
 #ax1.set_title('Grau de Instrução', fontsize=16, pad=20)
 st.pyplot(fig1)
@@ -146,7 +146,7 @@ labels = df_bem_gen['DS_GENERO']
 sizes = df_bem_gen['bemMedio']
 fig1, ax1 = plt.subplots()
 ax1.pie(sizes, labels=labels, autopct='%1.1f%%', #explode=explode, 
-        shadow=False, startangle=90, textprops={'fontsize': 8})
+        shadow=False, startangle=90, textprops={'fontsize': 15})
 ax1.axis('equal')# Equal aspect ratio ensures that pie is drawn as a circle.
 #ax1.set_title('Grau de Instrução', fontsize=16, pad=20)
 st.pyplot(fig1)
